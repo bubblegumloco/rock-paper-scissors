@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
+html {
+    background: black;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+}
+
+#container canvas, #overlay{
+    position: absolute;
+}
+
+#overlay-container {
+    display: flex;
+    justify-content: center; 
+    transform: translateY(300px);
+}
+
+#overlay{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.608);
+    font-family: 'Mynerve', cursive;
+    color: white;
+    font-size: 30px;
+    gap: 30px;
+}
+
+#replay {
+    padding: 8px;
+    background: rgb(96, 222, 127);
+    border-color: transparent;
+    opacity: 80%;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    border-radius: 20px;
+    font-family: 'Mynerve', cursive;
+    color: white;
+}
+
+#replay:hover {
+    background: rgb(96, 222, 127);
+    letter-spacing: 0.15em;
+    box-shadow: 0 0 10px rgb(107, 217, 134), 0 0 40px rgb(72, 220, 109),
+    0 0 80px rgb(58, 227, 100);
+    transition-delay: 0.2s;
+}

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
+body {
+    background: linear-gradient(134.2deg, #c6ffdd, #fbd786, #f7797d);
+    background-size: 400%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    animation: bganimation 5s infinite;
+
+
+}
+
+#gameBody {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gameBtns {
+    display: inline-block;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: solid 3px;
+    transition: .4s;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 100px;
+}
+
+.gameBtns:active {
+    transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    box-shadow: 0 0 2px rgba(0,0,0,35);
+    border-bottom: none;
+}
+
+.gameBtns:hover {
+    animation: pendulum 3s;
+}
+
+.title-section {
+    position: relative;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.title-section span{
+    position: relative;
+    font-size: 5rem;
+    font-family: 'Mynerve', cursive;
+    color: white;
+    display: inline-block;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.playerCard, .computerCard {
+    padding: 30px;
+    height: 50vh;
+    font-family: 'Mynerve', cursive;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+    gap: 100px;
+    padding-left: 90px;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+#result, #resetBtn, #result2, .rules{
+    font-family: 'Mynerve', cursive;
+    color: white;
+    padding: 8px;
+}
+
+.resultBox {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 90px;
+}
+
+.rules {
+    text-align: center;
+    font-size: 25px;
+}
+
+#result2 {
+    margin: 0;
+    padding: 0;
+}
+
+#resetBtn {
+    padding: 8px;
+    background: #fbd786;
+    border-color: transparent;
+    opacity: 80%;
+    font-size: 30px;
+    margin-left: 90px;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+#resetBtn:hover {
+    background: #fbd786;
+    letter-spacing: 0.15em;
+    box-shadow: 0 0 10px #fbd786, 0 0 40px #fbd786,
+    0 0 80px #f9de9d;
+    transition-delay: 0.2s;
+}
+
+.scoreLabel{
+    font-size: 70px;
+}
+
+@keyframes animate {
+    0%, 40%, 100%{
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes pendulum {
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes dance {
+    10%, 90% {
+        transform: translateX(10px) translateY(20px);
+    }
+    20%, 70% {
+        transform: translateX(0px) translateY(40px);
+    }
+    30%, 80% {
+        transform: translateX(-15px) translateY(30px);
+    }
+    40%, 60%{
+        transform: translateX(0px) translateY(20px)
+    }
+    50%{
+        transform: translateX(15px) translateY(50px)
+    }
+}
+
+
+
